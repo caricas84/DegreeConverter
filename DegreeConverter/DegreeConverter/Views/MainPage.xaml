@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DegreeConverter.Views.MainPage"              
+             BindingContext="{Binding Main, Source={StaticResource Locator}}">
+    <ContentPage.Content>
+        <StackLayout 
+            Padding="20">
+            <Label 
+                HorizontalOptions="Center" 
+                FontSize="Large" 
+                Text="Degree Converter"
+                TextColor="Coral">
+            </Label>
+            <Label 
+                HorizontalOptions="Center" 
+                FontSize="Medium" 
+                Text="(MVVM)">
+            </Label>
+            <Label 
+                Text="Temperature:"
+                TextColor="Blue">
+            </Label>
+            <Entry
+                Text="{Binding Temperature, Mode=TwoWay}"
+                Keyboard="Numeric" 
+                Placeholder="Enter an amount in pesos...">
+            </Entry>
+            <Button
+                HorizontalOptions="Center" 
+                Command="{Binding ConvertCommand}"
+                Text="°C - °F"
+                BackgroundColor="LightYellow">
+            </Button>
+            <Button
+                HorizontalOptions="Center" 
+                Command="{Binding OtherCommand}"
+                Text="°F - °C"
+                BackgroundColor="LightCyan">
+            </Button>
+            <Label
+                Text="Centigrade to Fahrenheit:"
+                TextColor="Blue">
+            </Label>
+            <Entry
+                Text="{Binding Fahrenheit, Mode=TwoWay}"
+                Keyboard="Numeric" 
+                Placeholder="Value in Degree Fahrenheit..."
+                BackgroundColor="LightYellow">
+            </Entry>
+            <Label
+                Text="Fahrenheit to Centigrade:"
+                TextColor="Blue">
+            </Label>
+            <Entry
+                Text="{Binding Centigrade, Mode=TwoWay}"
+                Keyboard="Numeric" 
+                Placeholder="Value in Degree Centigrade..."
+                BackgroundColor="LightCyan">
+            </Entry>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
