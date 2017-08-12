@@ -15,7 +15,8 @@
             <Label 
                 HorizontalOptions="Center" 
                 FontSize="Medium" 
-                Text="(MVVM)">
+                Text="(MVVM)"
+                TextColor="Black">
             </Label>
             <Label 
                 Text="Temperature:"
